@@ -16,6 +16,14 @@ public interface EmployeeServiceImp {
 
 	EmployeeDto getRole(String role);
 
-	List<EmployeeDto> updateall(List<EmployeeDto> employeedto);
+//	List<EmployeeDto> updateall(List<EmployeeDto> employeedto);
+
+	EmployeeDto update(EmployeeDto employeedto);
+
+	List<EmployeeDto> createall(List<EmployeeDto> employeedto);
+
+	List<Employee> updateall(List<EmployeeDto> employeedto);
+
+	String delete(int id);
 
 }

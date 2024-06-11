@@ -6,7 +6,6 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.relationship.employeeOneToOne.DTO.EmployeeDto;
 import com.example.relationship.employeeOneToOne.entity.Employee;
 
 @Repository
@@ -18,6 +17,5 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer>{
 
 	Optional<Employee> findByRole(String role);
 
-	List<EmployeeDto> saveAll(List<EmployeeDto> employeedto);
-
+	
 }
