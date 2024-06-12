@@ -29,6 +29,7 @@ public class EmployeeService implements EmployeeServiceImp {
 		emp.setCity(employeedto.getCity());
 		emp.setRole(employeedto.getRole());
 		emp.setSalary(employeedto.getSalary());
+		emp.setWorks(employeedto.getWorks());
 		employeeRepo.save(emp);
 		return employeedto;
 	}
@@ -43,6 +44,7 @@ public class EmployeeService implements EmployeeServiceImp {
 			emp.setCity(e.getCity());
 			emp.setRole(e.getRole());
 			emp.setSalary(e.getSalary());
+			emp.setWorks(e.getWorks());
 			employ.add(emp);
 		}
 		List<Employee> employ1= employeeRepo.saveAll(employ);
@@ -54,6 +56,7 @@ public class EmployeeService implements EmployeeServiceImp {
 			dto.setCity(ee.getCity());
 			dto.setRole(ee.getRole());
 			dto.setSalary(ee.getSalary());
+			dto.setWorks(ee.getWorks());
 			empdto.add(dto);
 		} return empdto;
 	}
@@ -67,6 +70,7 @@ public class EmployeeService implements EmployeeServiceImp {
 		employ1.setCity(employy.getCity());
 		employ1.setRole(employy.getRole());
 		employ1.setSalary(employy.getSalary());
+		employ1.setWorks(employy.getWorks());
 		return employ1;
 	}
 
@@ -86,6 +90,7 @@ public class EmployeeService implements EmployeeServiceImp {
 			dto.setCity(e.getCity());
 			dto.setRole(e.getRole());
 			dto.setSalary(e.getSalary());
+			dto.setWorks(e.getWorks());
 			empdto.add(dto);
 		}
 		return empdto;
@@ -101,6 +106,7 @@ public class EmployeeService implements EmployeeServiceImp {
 		dto.setCity(employ1.getCity());
 		dto.setRole(employ1.getRole());
 		dto.setSalary(employ1.getSalary());
+		dto.setWorks(employ1.getWorks());
 		return dto;
 	}
 
@@ -114,6 +120,7 @@ public class EmployeeService implements EmployeeServiceImp {
 			entity.setCity(e.getCity());
 			entity.setRole(e.getRole());
 			entity.setSalary(e.getSalary());
+			entity.setWorks(e.getWorks());
 			employee.add(entity);
 		}
 		return employeeRepo.saveAll(employee);
@@ -128,6 +135,7 @@ public class EmployeeService implements EmployeeServiceImp {
 		entity.setCity(employeedto.getCity());
 		entity.setRole(employeedto.getRole());
 		entity.setSalary(employeedto.getSalary());
+		entity.setWorks(employeedto.getWorks());
 		employeeRepo.save(entity);
 		return employeedto;
 	}
@@ -137,5 +145,17 @@ public class EmployeeService implements EmployeeServiceImp {
 		employeeRepo.deleteById(id);
 		return "deleted ";
 	}
-  
-}
+	
+	///********query *********///
+
+
+	@Override
+	public List<Object> getkey(Object key) {
+		return employeeRepo.getAnyKey(key);
+		
+	}
+	
+	
+	
+	}
+	

@@ -1,13 +1,17 @@
 package com.example.relationship.employeeOneToOne.DTO;
 
+import com.example.relationship.employeeOneToOne.entity.Works;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.Data;
 
-@Entity
-@Data
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class EmployeeDto {
 	
 	@Id
@@ -22,6 +26,7 @@ public class EmployeeDto {
 
 	private String city;
 
-	 
 
+
+	private Works works;
 }

@@ -24,6 +24,7 @@ import lombok.Setter;
 @Data
 @Getter
 @Setter
+@Table
 public class Employee {
 
 	@Id
@@ -40,7 +41,7 @@ public class Employee {
 	
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="fk_wid")
-	private Works work;
+	private Works works;
 	
 	
 	

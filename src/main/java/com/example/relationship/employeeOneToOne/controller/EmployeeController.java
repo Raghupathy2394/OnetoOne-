@@ -62,4 +62,10 @@ public class EmployeeController {
 	  public String delete(@PathVariable int id) {
 		  return employeeimp.delete(id);
 	  }
+	
+	/// **************** Query using ///////*********************
+	@GetMapping("getany/{key}")
+	public List<Object> getanykey(@PathVariable ("key") Object key){
+		return employeeimp.getkey(key);
+	}
 }
